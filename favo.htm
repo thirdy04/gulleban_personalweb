@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+            margin: 20px auto;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #333;
+            padding: 15px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .navigation a:hover {
+            background-color: #FFFA72;
+            color: #333;
+            transform: scale(1.1);
+        }
+        .favorites {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .fav-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .fav-item:hover {
+            transform: scale(1.05);
+            background: #FFFA72;
+        }
+        .fav-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .fav-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-left: 15px;
+        }
+        .fav-details {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    min-height: 40px; /* Ensure uniform height */
+}
+
+.fav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s;
+    min-height: 100px; /* Ensures all items remain aligned */
+}
+
+.fav-item:hover {
+    background: #FFFA72;
+}
+
+/* When expanded, show the details */
+.fav-item.expanded .fav-details {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    
+ <!-- Navigation Section -->
+ <div class="navigation">
+    <a href="index.htm">About Me</a>
+    <a href="subtake.htm">Subjects Taken</a>
+    <a href="subcur.htm">Subjects Currently Enrolled</a>
+    <a href="contact.htm">Contact Me</a>
+    <a href="favo.htm">My Favorites</a>
+    <a href="gallery.htm">Gallery</a>
+  </div>
+    <div class="favorites">
+        <h2>My Favorites</h2>
+        
+        <div class="fav-item" onclick="toggleDetails(0)">
+           <b> Favorite Music Genre </b>
+            <img src="pop music.png" class="fav-image" alt="Pop Music">
+            <div class="fav-details">I love Pop music because it’s catchy, uplifting, and always sets the right mood.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(1)">
+           <b>Favorite Food </b>
+            <img src="chick.jfif" class="fav-image" alt="Chicken and Rice">
+            <div class="fav-details">Chicken and rice is my go-to meal—simple, satisfying, and packed with flavor.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(2)">
+           <b>Favorite Drink </b> 
+            <img src="juic.jfif" class="fav-image" alt="Orange Juice">
+            <div class="fav-details">Orange juice is refreshing, full of vitamins, and perfect for any time of the day.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(3)">
+           <b>Favorite Movie Genre </b> 
+            <img src="action.jpg" class="fav-image" alt="Action Movies">
+            <div class="fav-details">Action movies keep me on the edge of my seat with their intense scenes and thrilling stunts.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(4)">
+           <b>Favorite Sport</b> 
+            <img src="volleyball.jpeg" class="fav-image" alt="Volleyball">
+            <div class="fav-details">Volleyball is exciting, fast-paced, and a great way to stay active while having fun with friends.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(5)">
+           <b>Favorite Hobby </b>
+            <img src="music.jpg" class="fav-image" alt="Listening to Music">
+            <div class="fav-details">Listening to music helps me relax, boosts my mood, and keeps me inspired throughout the day.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(6)">
+          <b> Favorite Destination </b> 
+            <img src="churchh.jpg" class="fav-image" alt="Church">
+            <div class="fav-details">I love visiting churches because of their peaceful ambiance, stunning architecture, and deep cultural significance.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(7)">
+           <b>Favorite Color </b> 
+            <img src="blue shades.jpeg" class="fav-image" alt="Blue Shades">
+            <div class="fav-details">Blue is calming, soothing, and reminds me of the ocean and open skies.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(8)">
+           <b>Favorite Animal </b>
+            <img src="doggy.jfif" class="fav-image" alt="Dog">
+            <div class="fav-details">Dogs are loyal, friendly, and full of love—always ready to brighten my day.</div>
+        </div>
+        <div class="fav-item" onclick="toggleDetails(9)">
+           <b>Favorite Season</b>
+            <img src="rainy.avif" class="fav-image" alt="Rainy Season">
+            <div class="fav-details">The rainy season brings cozy vibes, the soothing sound of rain, and refreshing cool air.</div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDetails(index) {
+            let details = document.getElementsByClassName('fav-details');
+            if (details[index].style.display === 'block') {
+                details[index].style.display = 'none';
+            } else {
+                details[index].style.display = 'block';
+            }
+        }
+        function toggleDetails(index) {
+    let items = document.getElementsByClassName('fav-item');
+    items[index].classList.toggle('expanded');
+}
+
+    </script>
+</body>
+</html>

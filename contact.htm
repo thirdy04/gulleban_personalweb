@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+            margin: 20px auto;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #333;
+            padding: 15px 20px;
+            margin: 0 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .navigation a:hover {
+            background-color: #FFFA72;
+            color: #333;
+            transform: scale(1.1);
+        }
+        .contact-me {
+            padding: 50px;
+        }
+        .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: 0.3s ease-in-out;
+        }
+        .contact-item:hover {
+            background: #fffa72;
+            box-shadow: 0 5px 15px rgba(255, 223, 0, 0.6);
+            transform: translateY(-3px);
+        }
+        .contact-item img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .contact-item a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+   <!-- Navigation Section -->
+   <div class="navigation">
+    <a href="index.htm">About Me</a>
+    <a href="subtake.htm">Subjects Taken</a>
+    <a href="subcur.htm">Subjects Currently Enrolled</a>
+    <a href="contact.htm">Contact Me</a>
+    <a href="favo.htm">My Favorites</a>
+    <a href="gallery.htm">Gallery</a>
+  </div>
+    <section class="contact-me">
+        <h1 class="con">Contact Me</h1>
+        <div class="contact-wrapper">
+            <div class="contact-photo">
+                <img src="thirdy.jpg" alt="Mayolito III C Gulleban">
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <img src="phone icon.png" alt="Phone">
+                    <span>+63 9073200365</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <img src="face.png" alt="Facebook">
+                    <a href="https://web.facebook.com/IIIyy04" target="_blank">Mayk Lowe III</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <img src="gmail.png" alt="Gmail">
+                    <a href="mailto:mcthirdxskie@gmail.com">mcthirdxskie@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

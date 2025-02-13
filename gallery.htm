@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: fit-content;
+      margin: 20px auto;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #333;
+      padding: 15px 20px;
+      margin: 0 5px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+
+    .navigation a:hover {
+      background-color: #FFFA72; /* Yellow hover */
+      color: #333;
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.5rem;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    /* Carousel Container */
+    .carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 450px; /* Fixed height for consistency */
+      object-fit: cover; /* Ensures images fill the container */
+      border-radius: 15px;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+      color: #fff;
+      padding: 10px;
+      font-size: 1.2rem;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    /* Carousel Navigation Arrows */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      color: #333;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-arrow:hover {
+      background-color: #FFFA72; /* Yellow hover */
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-arrow.prev {
+      left: 10px;
+    }
+
+    .carousel-arrow.next {
+      right: 10px;
+    }
+
+    /* Carousel Dots */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .carousel-dots .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-dots .dot.active {
+      background-color: #333;
+    }
+
+    .carousel-dots .dot:hover {
+      background-color: #FFFA72; /* Yellow hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Section -->
+  <div class="navigation">
+    <a href="index.htm">About Me</a>
+    <a href="subtake.htm">Subjects Taken</a>
+    <a href="subcur.htm">Subjects Currently Enrolled</a>
+    <a href="contact.htm">Contact Me</a>
+    <a href="favo.htm">My Favorites</a>
+    <a href="gallery.htm">Gallery</a>
+  </div>
+
+  <!-- Gallery Title -->
+  <h1>My Gallery</h1>
+
+  <!-- Carousel Container -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="cherry.jpg" alt="Fantasyland, Dapitan">
+        <div class="carousel-caption">Fantasyland, Dapitan</div>
+      </div>
+      <div class="carousel-item">
+        <img src="cagayan.jpg" alt="SM Downtown, Cagayan">
+        <div class="carousel-caption">SM Downtown, Cagayan</div>
+      </div>
+      <div class="carousel-item">
+        <img src="falls.jpg" alt="Piduan Falls, Don Victoriano">
+        <div class="carousel-caption">Piduan Falls, Don Victoriano</div>
+      </div>
+      <div class="carousel-item">
+        <img src="IMG_1065.jpg" alt="Spring Resort, Tambulig">
+        <div class="carousel-caption">Spring Resort, Tambulig</div>
+      </div>
+      <div class="carousel-item">
+        <img src="selfie.jpeg" alt="Snow World, Dapitan">
+        <div class="carousel-caption">Snow World, Dapitan</div>
+      </div>
+      <div class="carousel-item">
+        <img src="thirdy.jpg" alt="McKinley Hill ,Bonifacio Global City">
+        <div class="carousel-caption">McKinley Hill ,Bonifacio Global City</div>
+      </div>
+      <div class="carousel-item">
+        <img src="IMG_3551.JPG" alt="Chobii Chobi, Oslob">
+        <div class="carousel-caption">Chobii Chobi, Oslob</div>
+      </div>
+      <div class="carousel-item">
+        <img src="IMG_4664.jpg" alt="Tagaytay, Cavite">
+        <div class="carousel-caption">Tagaytay, Cavite</div>
+      </div>
+      
+      <div class="carousel-item">
+        <img src="IMG_5479.jpg" alt="60th Birthday">
+        <div class="carousel-caption">60'th Birthday</div>
+      </div>
+      <div class="carousel-item">
+        <img src="IMG_9938.jpg" alt="Bluenotes, Oakhill Park">
+        <div class="carousel-caption">Bluenotes, Oakhill Park</div>
+      </div>
+    </div>
+
+    <!-- Carousel Arrows -->
+    <button class="carousel-arrow prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-arrow next" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <!-- Carousel Dots -->
+  <div class="carousel-dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+    <span class="dot" onclick="goToSlide(4)"></span>
+    <span class="dot" onclick="goToSlide(5)"></span>
+    <span class="dot" onclick="goToSlide(6)"></span>
+    <span class="dot" onclick="goToSlide(7)"></span>
+    <span class="dot" onclick="goToSlide(8)"></span>
+    <span class="dot" onclick="goToSlide(9)"></span>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelector('.carousel');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      currentSlide = index;
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide > 0) ? currentSlide - 1 : 9;
+      showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide < 9) ? currentSlide + 1 : 0;
+      showSlide(currentSlide);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+    }
+
+    // Auto-play the carousel (optional)
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>
